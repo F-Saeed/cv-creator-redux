@@ -1,26 +1,30 @@
-/* import './sass/experience&projects.scss';
-import './sass/inputs.scss';
-import { useContext } from 'react';
-import { cvContext } from './CVContextProvider';
+// External Imports
 import { Editor } from '@tinymce/tinymce-react';
+import { useSelector, useDispatch } from 'react-redux';
+import { onInfoChange, onProjSubmit } from './jsComponents/actions';
+
+import './sass/experience&projects.scss';
+import './sass/inputs.scss';
 
 const Projects = () => {
-  const { state, onProjSubmit, onInfoChange } = useContext(cvContext);
+  const projectState = useSelector((state) => state.project);
   const { projectName, institution, projectStart, projectEnd, projectDescr } =
-    state.project;
+    projectState;
+
+  const dispatch = useDispatch();
 
   const handleChange = (event) => {
-    onInfoChange(event.target.value, event.target.id);
+    dispatch(onInfoChange(event.target.value, event.target.id));
   };
 
   const descrHandleChange = (newValue, editor) => {
-    onInfoChange(newValue, editor.id);
+    dispatch(onInfoChange(newValue, editor.id));
   };
 
   return (
     <section className='projects'>
       <h2>Projects</h2>
-      <form onSubmit={(event) => onProjSubmit(event)}>
+      <form onSubmit={(event) => dispatch(onProjSubmit(event))}>
         <div>
           <h3>Project Name:</h3>
           <input
@@ -87,4 +91,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; */
+export default Projects;

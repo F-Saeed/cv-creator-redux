@@ -25,8 +25,8 @@ const App = () => {
         <h1>CV Creator</h1>
         <GeneralInfo />
         <Education />
-        {/* <Experience />
-        <Projects /> */}
+        <Experience />
+        <Projects />
       </div>
       <Preview ref={componentRef} />
 

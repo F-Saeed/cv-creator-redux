@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { onDeleteEdu } from './jsComponents/actions';
+import { onDeleteEdu, onDeleteExp, onDeleteProj } from './jsComponents/actions';
 
 // SASS
 import {
@@ -58,9 +58,9 @@ const Preview = React.forwardRef((props, ref) => {
             ? 'Present'
             : data.to}
           <div
-          // onClick={() => {
-          //   onDeleteExp('expDelete', data.id);
-          // }}
+            onClick={() => {
+              dispatch(onDeleteExp('expDelete', data.id));
+            }}
           >
             <FontAwesomeIcon className='trash-icon' icon={faTrash} size='2x' />
           </div>
@@ -86,9 +86,9 @@ const Preview = React.forwardRef((props, ref) => {
             ? 'Present'
             : data.projectEnd}
           <div
-          // onClick={() => {
-          //   onDeleteProj('projDelete', data.id);
-          // }}
+            onClick={() => {
+              dispatch(onDeleteProj('projDelete', data.id));
+            }}
           >
             <FontAwesomeIcon className='trash-icon' icon={faTrash} size='2x' />
           </div>

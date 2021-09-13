@@ -1,25 +1,32 @@
-/* import './sass/experience&projects.scss';
-import './sass/inputs.scss';
-import { useContext } from 'react';
-import { cvContext } from './CVContextProvider';
+// External Imports
+import { useSelector, useDispatch } from 'react-redux';
 import { Editor } from '@tinymce/tinymce-react';
 
+// Internal Imports
+import { onInfoChange, onExpSubmit } from './jsComponents/actions';
+
+// SASS
+import './sass/experience&projects.scss';
+import './sass/inputs.scss';
+
 const Experience = () => {
-  const { state, onExpSubmit, onInfoChange } = useContext(cvContext);
-  const { companyName, position, from, to, expDescr } = state.experience;
+  const experienceState = useSelector((state) => state.experience);
+  const { companyName, position, from, to, expDescr } = experienceState;
+
+  const dispatch = useDispatch();
 
   const handleChange = (event) => {
-    onInfoChange(event.target.value, event.target.id);
+    dispatch(onInfoChange(event.target.value, event.target.id));
   };
 
   const descrHandleChange = (newValue, editor) => {
-    onInfoChange(newValue, editor.id);
+    dispatch(onInfoChange(newValue, editor.id));
   };
 
   return (
     <section className='experience'>
       <h2>Work Experience</h2>
-      <form onSubmit={(event) => onExpSubmit(event)}>
+      <form onSubmit={(event) => dispatch(onExpSubmit(event))}>
         <div>
           <h3>Company Name:</h3>
           <input
@@ -76,4 +83,4 @@ const Experience = () => {
   );
 };
 
-export default Experience; */
+export default Experience;

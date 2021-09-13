@@ -2,7 +2,11 @@ import patterns from './patterns';
 
 export const onInfoChange = (currentValue, id) => {
   if ((patterns[id] && currentValue.match(patterns[id])) || !patterns[id]) {
-    return { type: id, field: id, payload: { [id]: currentValue } };
+    return {
+      type: id,
+      field: id,
+      payload: { [id]: currentValue },
+    };
   }
 };
 

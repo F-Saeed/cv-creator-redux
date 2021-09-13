@@ -35,14 +35,13 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'field': {
+    case 'field':
       return { ...state, [action.field]: action.payload };
-    }
     case 'name':
     case 'email':
     case 'telephone':
     case 'linkedin':
-    case 'github': {
+    case 'github':
       return {
         ...state,
         generalInfo: {
@@ -50,11 +49,10 @@ export const reducer = (state = initialState, action) => {
           ...action.payload,
         },
       };
-    }
     case 'schoolName':
     case 'major':
     case 'educationStart':
-    case 'educationEnd': {
+    case 'educationEnd':
       return {
         ...state,
         education: {
@@ -62,8 +60,7 @@ export const reducer = (state = initialState, action) => {
           ...action.payload,
         },
       };
-    }
-    case 'eduSubmit': {
+    case 'eduSubmit':
       return {
         ...state,
         educationData: [
@@ -74,20 +71,19 @@ export const reducer = (state = initialState, action) => {
           ...initialState.education,
         },
       };
-    }
-    case 'eduDelete': {
+    case 'eduDelete':
       return {
         ...state,
         educationData: state.educationData.filter(
           (edu) => edu.id !== action.payload
         ),
       };
-    }
+
     case 'companyName':
     case 'position':
     case 'from':
     case 'to':
-    case 'expDescr': {
+    case 'expDescr':
       return {
         ...state,
         experience: {
@@ -95,8 +91,8 @@ export const reducer = (state = initialState, action) => {
           ...action.payload,
         },
       };
-    }
-    case 'expSubmit': {
+
+    case 'expSubmit':
       return {
         ...state,
         experienceData: [
@@ -107,20 +103,20 @@ export const reducer = (state = initialState, action) => {
           ...initialState.experience,
         },
       };
-    }
-    case 'expDelete': {
+
+    case 'expDelete':
       return {
         ...state,
         experienceData: state.experienceData.filter(
           (exp) => exp.id !== action.payload
         ),
       };
-    }
+
     case 'projectName':
     case 'institution':
     case 'projectStart':
     case 'projectEnd':
-    case 'projectDescr': {
+    case 'projectDescr':
       return {
         ...state,
         project: {
@@ -128,8 +124,8 @@ export const reducer = (state = initialState, action) => {
           ...action.payload,
         },
       };
-    }
-    case 'projSubmit': {
+
+    case 'projSubmit':
       return {
         ...state,
         projectsData: [
@@ -140,15 +136,15 @@ export const reducer = (state = initialState, action) => {
           ...initialState.project,
         },
       };
-    }
-    case 'projDelete': {
+
+    case 'projDelete':
       return {
         ...state,
         projectsData: state.projectsData.filter(
           (proj) => proj.id !== action.payload
         ),
       };
-    }
+
     default:
       return state;
   }
