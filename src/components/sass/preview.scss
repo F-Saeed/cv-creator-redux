@@ -1,0 +1,125 @@
+.preview {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-family: Montserrat-Regular;
+  margin-bottom: 30px;
+  padding: 50px;
+  min-height: 1151px;
+  width: 811px;
+
+  header {
+    border-bottom: #000 solid 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
+    overflow-wrap: break-word;
+    padding-bottom: 15px;
+
+    h1 {
+      font-family: Montserrat-Alt-Bold;
+      font-size: 2.35rem;
+      justify-self: start;
+    }
+
+    .contacts {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+      gap: 15px;
+      justify-items: end;
+      text-decoration: none;
+
+      .fa-icon {
+        color: #455aa3;
+        margin-left: 10px;
+      }
+
+      div {
+        color: #000;
+      }
+
+      a {
+        color: blueviolet;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .section {
+    border-bottom: #000 solid 2px;
+    margin-top: 40px;
+
+    & > h2 {
+      border-bottom: 1px #000 solid;
+      font-family: Montserrat-Bold;
+      display: inline;
+      font-size: 1.75rem;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      margin: 30px 0 20px;
+
+      .information {
+        justify-self: start;
+
+        & > h2 {
+          color: #555e70;
+          font-family: Montserrat-Bold;
+          font-size: 1.6rem;
+        }
+
+        & > p {
+          color: #313844;
+          font-family: Montserrat-Bold;
+          margin-top: 6px;
+          font-size: 1.1rem;
+        }
+
+        & > #expDescr-preview,
+        #projectDescr-preview {
+          color: #313844;
+          margin-left: 16px;
+          margin-top: 10px;
+          font-size: 0.9rem;
+        }
+      }
+
+      .years {
+        color: #8f9cc8;
+        font-family: Montserrat-Alt-Regular;
+        display: grid;
+        height: 100%;
+        grid-template-rows: 1fr 1fr;
+        justify-content: space-between;
+        justify-self: end;
+
+        & > div {
+          align-self: end;
+          cursor: pointer;
+          justify-self: center;
+          width: 25px;
+
+          .trash-icon {
+            color: rgba(255, 0, 0, 1);
+
+            &:hover {
+              color: rgba(255, 0, 0, 0.8);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media print {
+  .preview {
+    box-shadow: none;
+  }
+
+  .trash-icon {
+    display: none;
+  }
+}
