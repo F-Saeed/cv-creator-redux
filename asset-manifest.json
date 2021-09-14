@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/cv-creator-redux/static/css/main.c8202b91.chunk.css",
+    "main.js": "/cv-creator-redux/static/js/main.4d46a03a.chunk.js",
+    "main.js.map": "/cv-creator-redux/static/js/main.4d46a03a.chunk.js.map",
+    "runtime-main.js": "/cv-creator-redux/static/js/runtime-main.85be3f87.js",
+    "runtime-main.js.map": "/cv-creator-redux/static/js/runtime-main.85be3f87.js.map",
+    "static/js/2.02a39755.chunk.js": "/cv-creator-redux/static/js/2.02a39755.chunk.js",
+    "static/js/2.02a39755.chunk.js.map": "/cv-creator-redux/static/js/2.02a39755.chunk.js.map",
+    "index.html": "/cv-creator-redux/index.html",
+    "static/css/main.c8202b91.chunk.css.map": "/cv-creator-redux/static/css/main.c8202b91.chunk.css.map",
+    "static/js/2.02a39755.chunk.js.LICENSE.txt": "/cv-creator-redux/static/js/2.02a39755.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/cv-creator-redux/static/media/MontserratAlternates-Regular.a14e717f.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.85be3f87.js",
+    "static/js/2.02a39755.chunk.js",
+    "static/css/main.c8202b91.chunk.css",
+    "static/js/main.4d46a03a.chunk.js"
+  ]
+}
