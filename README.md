@@ -1,6 +1,6 @@
 # CV Creator
 
-A simple CV creation webapp created using React that allows users to easily create a simple CV by entering their information in the form given, and then downloading the CV as a PDF when they are finished.
+A simple CV creation webapp created using **React** and **Redux** that allows users to easily create a simple CV by entering their information in the form given, and then downloading the CV as a PDF when they are finished.
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@ A simple CV creation webapp created using React that allows users to easily crea
 
 ## General Information
 
-This webapp creates a simple cv according to the information the user has entered. This version of CV Creator is built on functional **React** that uses _useReducer_, and _useContext_ hooks.
+This webapp creates a simple cv according to the information the user has entered. This version of CV Creator is built on functional React and Redux.
 
 ## Usage
 
@@ -26,7 +26,8 @@ This webapp creates a simple cv according to the information the user has entere
 
 ## Technologies used
 
-- React 17
+- React
+- Redux
 - JavaScript
 - Fontawesome
 - uniqid (JavaScript library)
@@ -46,4 +47,4 @@ This webapp creates a simple cv according to the information the user has entere
 
 ## Deployment
 
-- [Link](https://f-saeed.github.io/cv-creator-useReducer-useContext/)
+- [Link](https://cv-creator-720.web.app/)
