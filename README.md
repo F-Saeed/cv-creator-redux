@@ -17,7 +17,7 @@ This webapp creates a simple cv according to the information the user has entere
 ## Usage
 
 - The CV Creator webapp is simple to use
-- User enters their general information which gets displayed on the preview section in real-time.
+- User enters their general information and afterwards clicks on add information to add the general information enterted to their resume.
 - User enters their educational information and experience information according to each institution individually.
   - after entering all the required information, user will click on _Add Education_/_Add Experience_ buttons to add that information to their CV.
   - each institution's information will have to added one by one
@@ -30,7 +30,7 @@ This webapp creates a simple cv according to the information the user has entere
 - Redux
 - JavaScript
 - Fontawesome
-- uniqid (JavaScript library)
+- uniqid (JavaScript package)
 - SASS
 - HTML
 
